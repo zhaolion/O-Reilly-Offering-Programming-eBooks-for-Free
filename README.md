@@ -25,4 +25,27 @@
 - Swift Pocket Reference
 
 # 下载连接
-执行目录下的sh文件即可（需要提前安装wget，你懂的～）
+
+使用 `aria2c` 下载：
+
+```bash
+aria2c -i O-Reilly-Offering-Programming-eBooks-for-Free.txt
+```
+
+使用 `wget` 下载：
+
+```bash
+wget -i O-Reilly-Offering-Programming-eBooks-for-Free.txt
+```
+
+使用 `curl` 下载:
+
+```bash
+cat O-Reilly-Offering-Programming-eBooks-for-Free.txt | while read LINE; do curl -O $LINE; done;
+```
+
+使用 `httpie` 下载：
+
+```bash
+cat O-Reilly-Offering-Programming-eBooks-for-Free.txt | while read LINE; do http -d $LINE; done;
+```
